@@ -11,13 +11,13 @@ const angka = getRandomInt(1, 100)
 
 btnConfirm.addEventListener('submit', function(e){
     e.preventDefault();
-    const inputUser = inputData.value
+    const inputUser = Number(inputData.value)
 
     if(inputUser > angka) {
         info.innerHTML = "Angka terlalu tinggi"
     } else if(inputUser < angka) {
         info.innerHTML = "Angka terlalu rendah"
-    } else if(inputUser == angka) {
+    } else if(inputUser === angka) {
         info.innerHTML = "Selamat, angka yang anda tebak benar!!!"
         info.style.color = "green"
     }
